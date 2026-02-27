@@ -22,7 +22,7 @@ int main(){
     first->next=secend;
     // create third node
     Node* third=new Node();
-    third->data=30;
+    third->data=40;
     third->next=NULL;
     secend->next=third;
     //print the nodes
