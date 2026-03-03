@@ -23,7 +23,7 @@ class sol{
 
 int main(){
     sol s;
-    vector<int>numbers={2,7,11,15};
+    vector<int>numbers={6,8,11,15};
     int target=9;
     vector<int> result=s.twosum(numbers,target);
     if(!result.empty()){
