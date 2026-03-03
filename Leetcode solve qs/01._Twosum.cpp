@@ -18,7 +18,7 @@ class Sol{
 };
 int main(){
     Sol s;
-    vector<int>nums={2,7,11,15};
+    vector<int>nums={2,8,11,15};
     int target=13;
     vector<int> result=s.twosum(nums,target);
     if(!result.empty()){
