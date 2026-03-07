@@ -20,7 +20,13 @@ class Linkedlist{
         this->head=nullptr;
     }
     //insert
-    void insert(int data){
+    void insertBegin(int data){
+        Node* newnode=new Node(data);
+        newnode->next=head;
+        head=newnode;
+
+    }
+    void insertend(int data){
         Node* newnode=new Node(data);
         if(head==nullptr){
             head=newnode;
@@ -30,6 +36,28 @@ class Linkedlist{
         while(temp->next!=nullptr){
             temp=temp->next;
         }
+        temp->next=newnode;
+    }
+    // insert any postion
+    void anypos(int data,int pos){
+        Node* newnode=new Node(data);
+        if(pos==1){
+            newnode->next=head;
+            head=newnode;
+            return;
+        }
+        Node* temp=head;
+        int count=1;
+        while(temp!=NULL && count<pos-1 ){
+            temp=temp->next;
+            count++;
+        }
+        if(temp==NULL){
+            cout<<"position out of range"<<endl;
+            delete newnode;
+            return;
+        }
+        newnode->next=temp->next;
         temp->next=newnode;
     }
     
@@ -52,12 +80,25 @@ class Linkedlist{
 
 int main(){
     Linkedlist li;
-    li.insert(10);
-    li.insert(20);
-    li.insert(30);
-    li.insert(40);
-    li.insert(50);
-    li.insert(60);
+
+     li.insertend(22);
+
+    li.insertBegin(10);
+      li.insertBegin(20);
+        li.insertBegin(30);
+          li.insertBegin(40);
+
+         
+          li.insertend(26);
+          li.insertend(27);
+
+
+    // li.anypos(10,1);
+    // li.anypos(20,2);
+    // li.anypos(30,2);
+    // li.anypos(40,1);
+    // li.anypos(50,5);
+  
     li.display();
     return 0;
 }
