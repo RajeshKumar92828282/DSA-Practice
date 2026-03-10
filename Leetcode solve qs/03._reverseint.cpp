@@ -20,7 +20,7 @@ class sol{
 };
 int main(){
     sol s;
-    int x=12332;
+    int x=555;
     int result=s.rev(x);
     cout<<result<<endl;
     return 0;

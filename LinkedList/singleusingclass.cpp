@@ -60,7 +60,20 @@ class Linkedlist{
         newnode->next=temp->next;
         temp->next=newnode;
     }
-    
+    // delete
+   void deletebegin(){
+    if(head==NULL){
+        cout<<"empty list";
+        return;
+    }
+    Node* temp=head;
+    head=head->next;
+    delete temp;
+   }
+
+
+
+
     //print 
      
     
@@ -91,14 +104,15 @@ int main(){
          
           li.insertend(26);
           li.insertend(27);
-
+   
 
     // li.anypos(10,1);
     // li.anypos(20,2);
     // li.anypos(30,2);
     // li.anypos(40,1);
     // li.anypos(50,5);
-  
+  li.deletebegin();
+ 
     li.display();
     return 0;
 }
