@@ -113,7 +113,8 @@ int main(){
     // li.anypos(50,5);
   li.deletebegin();
  
-    li.display();
+    li.display();deletion linked
+    
     return 0;
 }
 
