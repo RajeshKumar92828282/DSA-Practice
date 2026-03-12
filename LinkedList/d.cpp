@@ -64,7 +64,7 @@ class Linkedlist{
         return;
       }
       if(head->next==NULL){
-        delete head;
+        // delete head;
         head=NULL;
         return;
       }
@@ -73,7 +73,7 @@ class Linkedlist{
         temp=temp->next;
       }
       temp->prev->next=NULL;
-      delete temp;
+      // delete temp;
     }
 
       void display(){
